@@ -37,7 +37,6 @@ namespace Microsoft.AspNetCore.Routing.FunctionalTests
                 app.UseRouting();
                 app.UseAuthorization();
                 app.UseEndpoints(b => b.Map("/", TestDelegate));
-
             })
            .ConfigureServices(services =>
            {
@@ -62,7 +61,6 @@ namespace Microsoft.AspNetCore.Routing.FunctionalTests
                 app.UseRouting();
                 app.UseAuthorization();
                 app.UseEndpoints(b => b.Map("/", TestDelegate));
-
             })
            .ConfigureServices(services =>
            {
@@ -87,7 +85,6 @@ namespace Microsoft.AspNetCore.Routing.FunctionalTests
                 app.UseRouting();
                 app.UseAuthorization();
                 app.UseEndpoints(b => b.Map("/", TestDelegate).RequireAuthorization());
-
             })
            .ConfigureServices(services =>
            {
@@ -134,7 +131,6 @@ namespace Microsoft.AspNetCore.Routing.FunctionalTests
             {
                 app.UseRouting();
                 app.UseEndpoints(b => b.Map("/", TestDelegate).RequireAuthorization());
-
             })
            .ConfigureServices(services =>
            {
@@ -158,7 +154,6 @@ namespace Microsoft.AspNetCore.Routing.FunctionalTests
                 app.UseAuthorization();
                 app.UseRouting();
                 app.UseEndpoints(b => b.Map("/", TestDelegate).RequireAuthorization());
-
             })
            .ConfigureServices(services =>
            {
@@ -182,7 +177,6 @@ namespace Microsoft.AspNetCore.Routing.FunctionalTests
                 app.UseRouting();
                 app.UseEndpoints(b => b.Map("/", TestDelegate).RequireAuthorization());
                 app.UseAuthorization();
-
             })
            .ConfigureServices(services =>
            {
@@ -206,7 +200,6 @@ namespace Microsoft.AspNetCore.Routing.FunctionalTests
                 app.UseRouting();
                 app.UseCors();
                 app.UseEndpoints(b => b.Map("/", TestDelegate).RequireCors(policy => policy.AllowAnyOrigin()));
-
             })
            .ConfigureServices(services =>
            {
@@ -231,7 +224,6 @@ namespace Microsoft.AspNetCore.Routing.FunctionalTests
                 app.UseCors();
                 app.UseRouting();
                 app.UseEndpoints(b => b.Map("/", TestDelegate).RequireCors(policy => policy.AllowAnyOrigin()));
-
             })
            .ConfigureServices(services =>
            {
