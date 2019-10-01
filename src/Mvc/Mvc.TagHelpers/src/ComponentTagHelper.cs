@@ -6,14 +6,13 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
-using Microsoft.AspNetCore.Mvc.ViewFeatures.RazorComponents;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Microsoft.AspNetCore.Mvc.TagHelpers
 {
     /// <summary>
-    /// A <see cref="TagHelper"/> that renders a Blazor component.
+    /// A <see cref="TagHelper"/> that renders a Razor component.
     /// </summary>
     [HtmlTargetElement("component", Attributes = ComponentTypeName)]
     public class ComponentTagHelper : TagHelper
@@ -71,7 +70,7 @@ namespace Microsoft.AspNetCore.Mvc.TagHelpers
             }
 
             var componentRenderer = ViewContext.HttpContext.RequestServices.GetRequiredService<IComponentRenderer>();
-            var result = await componentRenderer.RenderComponentAsync(ViewContext, ComponentType, RenderMode, Parameters);
+            var result = await componentRenderer.RenderComponentAsync(ViewContext, ComponentType, RenderMode, _parameters);
 
             // Reset the TagName. We don't want `component` to render.
             output.TagName = null;

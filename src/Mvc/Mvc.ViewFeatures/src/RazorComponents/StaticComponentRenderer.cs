@@ -14,7 +14,7 @@ using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace Microsoft.AspNetCore.Mvc.ViewFeatures.RazorComponents
+namespace Microsoft.AspNetCore.Mvc.ViewFeatures
 {
     internal class StaticComponentRenderer
     {

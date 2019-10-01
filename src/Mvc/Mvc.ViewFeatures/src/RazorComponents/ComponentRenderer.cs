@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace Microsoft.AspNetCore.Mvc.ViewFeatures.RazorComponents
+namespace Microsoft.AspNetCore.Mvc.ViewFeatures
 {
     internal class ComponentRenderer : IComponentRenderer
     {
